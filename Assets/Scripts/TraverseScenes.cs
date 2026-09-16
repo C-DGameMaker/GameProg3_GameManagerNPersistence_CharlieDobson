@@ -3,4 +3,9 @@ using UnityEngine;
 public class TraverseScenes : MonoBehaviour
 {
     [SerializeField] int _sceneToLoad;
+
+    private void OnGUI()
+    {
+        
+    }
 }
