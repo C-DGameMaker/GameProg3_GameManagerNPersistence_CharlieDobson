@@ -393,6 +393,8 @@ GameObject:
   m_Component:
   - component: {fileID: 554092175}
   - component: {fileID: 554092174}
+  - component: {fileID: 554092176}
+  - component: {fileID: 554092177}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -412,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ff3de548969be4e83f973b93dbc51e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  _manager: {fileID: 0}
   _playerName: 
   _currentHealth: 0
   _maxHealth: 10
@@ -435,6 +436,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &554092176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554092173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767bbe5ae07f10b488be3dd74b29a9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TraverseScenes
+--- !u!114 &554092177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554092173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d27e273f52437a4c8d7dc0257fabee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdjustThings
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
