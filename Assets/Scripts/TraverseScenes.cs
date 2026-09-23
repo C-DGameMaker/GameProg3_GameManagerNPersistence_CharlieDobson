@@ -14,6 +14,6 @@ public class TraverseScenes : MonoBehaviour
     private void OnGUI()
     {
         
-        GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 80, 100, 30), "Current Scene: " + SceneManager.GetActiveScene().name);
+        GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 80, 100, 100), "Current Scene: " + SceneManager.GetActiveScene().name);
     }
 }
