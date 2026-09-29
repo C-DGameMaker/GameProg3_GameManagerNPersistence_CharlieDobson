@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Changes what scene you are loaded into
+/// </summary>
 public class TraverseScenes : MonoBehaviour
 {
     private void Update()
@@ -14,7 +16,7 @@ public class TraverseScenes : MonoBehaviour
 
     private void OnGUI()
     {
-        
+        // Changes the label to show what scene you're in
         GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 80, 100, 100), "Current Scene: " + SceneManager.GetActiveScene().name);
     }
 }

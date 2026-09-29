@@ -2,11 +2,12 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// The game manager, does all the fun stuff related to it. 
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        // Checks to see if there is already a game manager, if not it sets it to this, and if so, destorys this. 
         if (manager == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Displays all the stuff
     private void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 200, 40), "Player Name: " + _playerName);
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
         GUI.Label(new Rect(10, 110, 200, 40), "Score: " + _score);
     }
 
+    // Saves the current state of the game
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -62,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // Loads the save that was created
     public void Load()
     {
         if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
